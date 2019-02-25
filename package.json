@@ -1,0 +1,26 @@
+{
+  "name": "alfred",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nachos-JP/alfred.git"
+  },
+  "author": "Shota Maekawa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nachos-JP/alfred/issues"
+  },
+  "homepage": "https://github.com/Nachos-JP/alfred#readme",
+  "devDependencies": {
+    "electron": "^4.0.5",
+    "node-sass": "^4.11.0"
+  },
+  "dependencies": {
+    "vue": "^2.6.7"
+  }
+}
