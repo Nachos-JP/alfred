@@ -4,8 +4,8 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "start": "electron .",
-    "dev": "node-sass src/style/scss --output src/style --output-style expanded && electron .",
+    "start": "electron src/",
+    "dev": "node-sass src/style/scss --output src/style --output-style expanded && electron src/",
     "package:linux": "electron-packager src/ --overwrite --platform=linux --arch=x64 --out=dist",
     "package:mac": "electron-packager src/ --overwrite --platform=darwin --arch=x64 --out=dist",
     "package:win": "electron-packager src/ --overwrite --platform=win32 --arch=x64 --out=dist",
