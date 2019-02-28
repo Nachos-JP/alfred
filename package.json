@@ -1,5 +1,5 @@
 {
-  "name": "alfred",
+  "name": "gekko",
   "version": "0.0.1",
   "description": "",
   "main": "main.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Nachos-JP/alfred.git"
+    "url": "git+https://github.com/Nachos-JP/gekko.git"
   },
   "author": "Shota Maekawa",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Nachos-JP/alfred/issues"
+    "url": "https://github.com/Nachos-JP/gekko/issues"
   },
-  "homepage": "https://github.com/Nachos-JP/alfred#readme",
+  "homepage": "https://github.com/Nachos-JP/gekko#readme",
   "devDependencies": {
     "electron": "^4.0.5",
     "node-sass": "^4.11.0"
