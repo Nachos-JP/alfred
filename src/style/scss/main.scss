@@ -17,6 +17,8 @@ header {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
     background: magenta;
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
 }
 
 @import "./header";
