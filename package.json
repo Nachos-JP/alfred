@@ -5,6 +5,11 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
+    "dev": "node-sass src/style/scss --output src/style --output-style expanded && electron .",
+    "package:linux": "electron-packager src/ --overwrite --platform=linux --arch=x64 --out=dist",
+    "package:mac": "electron-packager src/ --overwrite --platform=darwin --arch=x64 --out=dist",
+    "package:win": "electron-packager src/ --overwrite --platform=win32 --arch=x64 --out=dist",
+    "package:all": "electron-packager src/ --overwrite --platform=all --arch=x64 --out=dist",
     "sass": "node-sass -w ./style/scss --output ./style --output-style expanded &"
   },
   "repository": {
@@ -18,10 +23,13 @@
   },
   "homepage": "https://github.com/Nachos-JP/gekko#readme",
   "devDependencies": {
-    "electron": "^4.0.5",
+    "electron-packager": "^13.1.0",
     "node-sass": "^4.11.0"
   },
   "dependencies": {
+    "electron": "^4.0.6",
+    "electron-store": "^2.0.0",
     "vue": "^2.6.7"
-  }
+  },
+  "private": true
 }
