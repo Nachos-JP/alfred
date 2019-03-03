@@ -132,3 +132,19 @@ footer .footer-text {
   font-size: 10px;
   line-height: 22px;
 }
+
+footer .notification-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+footer .notification-btn img {
+  width: 16px;
+  height: 16px;
+}
