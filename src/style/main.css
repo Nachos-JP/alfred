@@ -110,7 +110,47 @@ header .window-control-container #window-close-btn {
 main {
   grid-row: 2 / 3;
   grid-column: 1 / 2;
-  background: cyan;
+}
+
+main #app-start-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+main .start-btn-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 500px;
+  height: 200px;
+}
+
+main .start-btn-wrapper .start-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: 1px solid silver;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+main .start-btn-wrapper .start-btn:hover {
+  background: silver;
+}
+
+main .start-btn-wrapper .start-btn img {
+  width: 50px;
+  height: 50px;
+}
+
+main .start-btn-wrapper .start-btn span {
+  text-align: center;
 }
 
 footer {
