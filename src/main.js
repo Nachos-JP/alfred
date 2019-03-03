@@ -8,14 +8,18 @@ const store = new Store();
 let mainWindow = null;
 
 const createWindow = ()=>{
+  const storeWidth = store.get("window.bound.width");
+  const storeHeight = store.get("window.bound.height");
+  const storeCoordX = store.get("window.bound.x");
+  const storeCoordY = store.get("window.bound.y");
   mainWindow = new BrowserWindow({
-    width: store.get("window.bound.width")?store.get("window.bound.width"):800,
-    height: store.get("window.bound.height")?store.get("window.bound.height"):600,
-    x: store.get("window.bound.x")?store.get("window.bound.x"):null,
-    y: store.get("window.bound.y")?store.get("window.bound.y"):null,
+    width: storeWidth ? storeWidth : 800,
+    height: storeHeight ? storeHeight : 600,
+    x: storeCoordX ? storeCoordX : null,
+    y: storeCoordY ? storeCoordY : null,
     frame: false
   });
-  mainWindow.loadFile("index.html");
+  mainWindow.loadURL(`file://${__dirname}/index.html`);
   mainWindow.webContents.openDevTools();
   mainWindow.on("close", ()=>{
     const bound = mainWindow.getBounds();
