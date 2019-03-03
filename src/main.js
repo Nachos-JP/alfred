@@ -12,6 +12,7 @@ const createWindow = ()=>{
   const storeHeight = store.get("window.bound.height");
   const storeCoordX = store.get("window.bound.x");
   const storeCoordY = store.get("window.bound.y");
+
   mainWindow = new BrowserWindow({
     width: storeWidth ? storeWidth : 800,
     height: storeHeight ? storeHeight : 600,
@@ -21,6 +22,7 @@ const createWindow = ()=>{
   });
   mainWindow.loadURL(`file://${__dirname}/index.html`);
   mainWindow.webContents.openDevTools();
+
   mainWindow.on("close", ()=>{
     const bound = mainWindow.getBounds();
     store.set("window.bound", {
@@ -30,6 +32,7 @@ const createWindow = ()=>{
       y: bound.y
     });
   })
+
   mainWindow.on("closed", ()=>{
     mainWindow = null;
   })

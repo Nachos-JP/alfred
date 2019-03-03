@@ -1,13 +1,28 @@
-footer {
-    display: flex;
-    justify-content: center;
-    align-content: center;
+.footer-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 .footer-text {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    font-size: 10px;
+    line-height: $footer-height;
+}
+
+.notification-btn {
     display: flex;
     justify-content: center;
-    align-content: center;
-    font-size: 12px;
-    line-height: $footer-height;
+    align-items: center;
+    width: $footer-height;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    img {
+        width: 16px;
+        height: 16px;
+    }
 }

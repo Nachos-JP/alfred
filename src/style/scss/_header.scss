@@ -6,6 +6,30 @@
     -webkit-user-select: none;
 }
 
+.window-app-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $header-height;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-app-region: no-drag;
+    img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.window-title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    font-size: 14px;
+    line-height: $header-height;
+}
+
 .window-control-container {
     display: grid;
     grid-template-rows: 1fr;

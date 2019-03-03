@@ -4,11 +4,15 @@
     <meta charset="utf-8">
     <title>GEKKO</title>
     <link rel="stylesheet" href="style/main.css">
-    <script src="node_modules/vue/dist/vue.min.js"></script>
+    <script defer src="node_modules/vue/dist/vue.min.js"></script>
   </head>
   <body>
     <header>
       <div class="titlebar-drag-region">
+        <div class="window-app-icon">
+          <img src="assets/icon/gekko.svg">
+        </div>
+        <span class="window-title">Project 1</span>
         <div class="window-control-container">
           <div id="window-min-btn" class="window-control-btn">
             <img src="assets/icon/minimize.svg">
@@ -26,12 +30,26 @@
       </div>
     </header>
     <main>
-      <div id="app">
-        {{ message }}
+      <div id="app-start-content">
+        <div class="start-btn-wrapper">
+          <div id="new-project-btn" class="start-btn">
+            <img src="assets/icon/new_file.svg">
+            <span>NEW PROJECT</span>
+          </div>
+          <div id="open-project-btn" class="start-btn">
+            <img src="assets/icon/open_file.svg">
+            <span>OPEN PROJECT</span>
+          </div>
+        </div>
       </div>
     </main>
     <footer>
-      <div class="footer-text">GEKKO 2019</div>
+      <div class="footer-wrapper">
+        <span class="footer-text">GEKKO 2019</span>
+        <div class="notification-btn">
+          <img src="assets/icon/bell.svg">
+        </div>
+      </div>
     </footer>
     <script>
       require("./renderer.js");
