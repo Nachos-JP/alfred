@@ -1,4 +1,5 @@
 const windowControl = require("./windowControl");
+const startProject = require("./startProject");
 
 module.exports = {
   add: function(){
@@ -30,6 +31,18 @@ module.exports = {
     add: function(){
       const targetElement = document.getElementById("window-close-btn");
       targetElement.onclick = () => windowControl.close();
+    }
+  },
+  newProjectBtn: {
+    add: function(){
+      const targetElement = document.getElementById("new-project-btn");
+      targetElement.onclick = () => alert("NEW PROJECT");
+    }
+  },
+  openProjectBtn: {
+    add: function(){
+      const targetElement = document.getElementById("open-project-btn");
+      targetElement.onclick = () => startProject.open();
     }
   }
 };
