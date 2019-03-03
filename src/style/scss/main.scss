@@ -1,7 +1,7 @@
 @import "./animation";
 
-$header-height: 80px;
-$footer-height: 80px;
+$header-height: 30px;
+$footer-height: 22px;
 
 body {
     display: grid;
@@ -17,11 +17,8 @@ header {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
     background: magenta;
-    -webkit-user-select: none;
-    -webkit-app-region: drag;
+    @import "./header";
 }
-
-@import "./header";
 
 main {
     grid-row: 2 / 3;
@@ -33,6 +30,6 @@ footer {
     grid-row: 3 / 4;
     grid-column: 1 / 2;
     background: orange;
+    @import "./footer";
 }
 
-@import "./footer";
