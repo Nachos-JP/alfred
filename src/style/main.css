@@ -31,6 +31,23 @@ header .titlebar-drag-region {
   -webkit-user-select: none;
 }
 
+header .window-app-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-app-region: no-drag;
+}
+
+header .window-app-icon img {
+  width: 20px;
+  height: 20px;
+}
+
 header .window-control-container {
   display: grid;
   grid-template-rows: 1fr;
