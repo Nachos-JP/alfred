@@ -48,6 +48,17 @@ header .window-app-icon img {
   height: 20px;
 }
 
+header .window-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  font-size: 12px;
+  line-height: 30px;
+}
+
 header .window-control-container {
   display: grid;
   grid-template-rows: 1fr;
