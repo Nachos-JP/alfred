@@ -49,13 +49,10 @@ header .window-app-icon img {
 }
 
 header .window-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   top: 0;
   left: 50%;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 30px;
 }
 
@@ -129,12 +126,9 @@ footer .footer-wrapper {
 }
 
 footer .footer-text {
-  display: flex;
-  justify-content: center;
-  align-content: center;
   position: absolute;
   top: 0;
   left: 50%;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 22px;
 }
