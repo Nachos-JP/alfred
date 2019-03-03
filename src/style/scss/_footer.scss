@@ -1,13 +1,12 @@
-footer {
+.footer-wrapper {
     display: flex;
     justify-content: center;
     align-content: center;
-}
-
-.footer-text {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    font-size: 12px;
-    line-height: $footer-height;
+    .footer-text {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        font-size: 12px;
+        line-height: $footer-height;
+    }
 }

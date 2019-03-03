@@ -94,13 +94,13 @@ footer {
   background: orange;
 }
 
-footer footer {
+footer .footer-wrapper {
   display: flex;
   justify-content: center;
   align-content: center;
 }
 
-footer .footer-text {
+footer .footer-wrapper .footer-text {
   display: flex;
   justify-content: center;
   align-content: center;

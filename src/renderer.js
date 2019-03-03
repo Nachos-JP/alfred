@@ -1,10 +1,11 @@
 const eventListener = require("./modules/eventListener");
 
-eventListener.add();
-
-const app = new Vue({
-  el: '#app',
-  data: {
-    message: 'Hello Vue!'
-  }
-});
+window.onload = () => {
+  eventListener.add();
+  const app = new Vue({
+    el: '#app',
+    data: {
+      message: 'Hello Vue!'
+    }
+  });
+};
