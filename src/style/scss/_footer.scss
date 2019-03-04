@@ -2,6 +2,7 @@
     width: 100%;
     height: 100%;
     position: relative;
+    background: $main-color;
 }
 
 .footer-text {
@@ -11,6 +12,7 @@
     font-size: 10px;
     line-height: $footer-height;
     user-select: none;
+    color: $dark-color;
 }
 
 #notification-btn {
