@@ -10,9 +10,10 @@
     left: 50%;
     font-size: 10px;
     line-height: $footer-height;
+    user-select: none;
 }
 
-.notification-btn {
+#notification-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,6 +22,11 @@
     position: absolute;
     top: 0;
     right: 0;
+    opacity: 0.8;
+    &:hover {
+        background: rgba(255, 255, 255, 0.2);
+        opacity: 1;
+    }
     img {
         width: 16px;
         height: 16px;

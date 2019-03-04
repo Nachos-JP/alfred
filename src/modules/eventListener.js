@@ -44,5 +44,11 @@ module.exports = {
       const targetElement = document.getElementById("open-project-btn");
       targetElement.onclick = () => startProject.open();
     }
+  },
+  notificationBtn: {
+    add: function(){
+      const targetElement = document.getElementById("notification-btn");
+      targetElement.onclick = () => alert("Notification");
+    }
   }
 };
