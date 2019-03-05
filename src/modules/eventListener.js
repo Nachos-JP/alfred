@@ -33,18 +33,6 @@ module.exports = {
       targetElement.onclick = () => windowControl.close();
     }
   },
-  newProjectBtn: {
-    add: function(){
-      const targetElement = document.getElementById("new-project-btn");
-      targetElement.onclick = () => alert("NEW PROJECT");
-    }
-  },
-  openProjectBtn: {
-    add: function(){
-      const targetElement = document.getElementById("open-project-btn");
-      targetElement.onclick = () => startProject.open();
-    }
-  },
   notificationBtn: {
     add: function(){
       const targetElement = document.getElementById("notification-btn");
