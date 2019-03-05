@@ -55,6 +55,7 @@ header .window-title {
   font-size: 14px;
   line-height: 30px;
   color: #ffe3cc;
+  transform: translate(-50%);
 }
 
 header .window-control-container {
@@ -178,6 +179,7 @@ footer .footer-text {
   line-height: 22px;
   user-select: none;
   color: #332112;
+  transform: translate(-50%);
 }
 
 footer #notification-btn {
