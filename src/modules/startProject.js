@@ -1,9 +1,13 @@
 const dialog = require("electron").remote.dialog;
+
 const fs = require("fs").promises;
+const path = require("path");
+
+const dataManager = require("./dataManager");
 
 module.exports = {
   open: async function(){
-    const fileName = dialog.showOpenDialog(null, {
+    const filePathList = dialog.showOpenDialog(null, {
       properties: ["openFile"],
       title: "Select project file",
       defaultPath: ".",
@@ -11,7 +15,9 @@ module.exports = {
         {name: "project file", extensions: ["gek"]}
       ]
     });
-    const data = await fs.readFile(fileName[0], "utf8");
+    const [fileName, ...ext] = path.basename(filePathList[0]).split(".");
+
+    const data = await fs.readFile(filePathList[0], "utf8");
     console.log(data);
   }
 };
