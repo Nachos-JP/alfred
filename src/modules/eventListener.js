@@ -1,5 +1,5 @@
 const windowControl = require("./windowControl");
-const startProject = require("./startProject");
+const fileManager = require("./fileManager");
 
 module.exports = {
   add: function(){
@@ -37,6 +37,24 @@ module.exports = {
     add: function(){
       const targetElement = document.getElementById("notification-btn");
       targetElement.onclick = () => alert("Notification");
+    }
+  },
+  menubarNewFileBtn: {
+    add: function(){
+      const targetElement = document.getElementById("menubar-new-file-btn");
+      targetElement.onclick = () => alert("New file");
+    }
+  },
+  menubarOpenFileBtn: {
+    add: function(){
+      const targetElement = document.getElementById("menubar-open-file-btn");
+      targetElement.onclick = () => fileManager.openFile();
+    }
+  },
+  menubarSaveBtn: {
+    add: function(){
+      const targetElement = document.getElementById("menubar-save-btn");
+      targetElement.onclick = () => alert("Save");
     }
   }
 };

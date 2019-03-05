@@ -62,6 +62,13 @@ header .menubar .menubar-btn {
   width: 30px;
   height: 100%;
   margin-left: 2px;
+  user-select: none;
+  opacity: 0.8;
+}
+
+header .menubar .menubar-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 1;
 }
 
 header .menubar .menubar-btn img {
