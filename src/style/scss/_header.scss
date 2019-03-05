@@ -23,6 +23,25 @@
     }
 }
 
+.menubar {
+    display: flex;
+    height: 100%;
+    margin-left: 40px;
+    -webkit-app-region: no-drag;
+    .menubar-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $header-height;
+        height: 100%;
+        margin-left: 2px;
+        img {
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
 .window-title {
     position: absolute;
     top: 0;
