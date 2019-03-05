@@ -1,5 +1,5 @@
 const windowControl = require("./windowControl");
-const startProject = require("./startProject");
+const fileManager = require("./fileManager");
 
 module.exports = {
   add: function(){
@@ -33,16 +33,28 @@ module.exports = {
       targetElement.onclick = () => windowControl.close();
     }
   },
-  newProjectBtn: {
+  notificationBtn: {
     add: function(){
-      const targetElement = document.getElementById("new-project-btn");
-      targetElement.onclick = () => alert("NEW PROJECT");
+      const targetElement = document.getElementById("notification-btn");
+      targetElement.onclick = () => alert("Notification");
     }
   },
-  openProjectBtn: {
+  menubarNewFileBtn: {
     add: function(){
-      const targetElement = document.getElementById("open-project-btn");
-      targetElement.onclick = () => startProject.open();
+      const targetElement = document.getElementById("menubar-new-file-btn");
+      targetElement.onclick = () => alert("New file");
+    }
+  },
+  menubarOpenFileBtn: {
+    add: function(){
+      const targetElement = document.getElementById("menubar-open-file-btn");
+      targetElement.onclick = () => fileManager.openFile();
+    }
+  },
+  menubarSaveBtn: {
+    add: function(){
+      const targetElement = document.getElementById("menubar-save-btn");
+      targetElement.onclick = () => alert("Save");
     }
   }
 };

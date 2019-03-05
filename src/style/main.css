@@ -20,13 +20,13 @@ body {
 header {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
-  background: magenta;
 }
 
 header .titlebar-drag-region {
   width: 100%;
   height: 100%;
   position: relative;
+  background: #332112;
   -webkit-app-region: drag;
   -webkit-user-select: none;
 }
@@ -48,12 +48,42 @@ header .window-app-icon img {
   height: 20px;
 }
 
+header .menubar {
+  display: flex;
+  height: 100%;
+  margin-left: 40px;
+  -webkit-app-region: no-drag;
+}
+
+header .menubar .menubar-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 100%;
+  margin-left: 2px;
+  user-select: none;
+  opacity: 0.8;
+}
+
+header .menubar .menubar-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 1;
+}
+
+header .menubar .menubar-btn img {
+  width: 16px;
+  height: 16px;
+}
+
 header .window-title {
   position: absolute;
   top: 0;
   left: 50%;
   font-size: 14px;
   line-height: 30px;
+  color: #ffe3cc;
+  transform: translate(-50%);
 }
 
 header .window-control-container {
@@ -107,62 +137,43 @@ header .window-control-container #window-close-btn {
   grid-column: 3 / 4;
 }
 
+header .window-control-container #window-close-btn:hover {
+  background: orangered;
+}
+
 main {
   grid-row: 2 / 3;
   grid-column: 1 / 2;
 }
 
-main #app-start-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+main .main-area {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 200px 1fr;
   width: 100%;
   height: 100%;
 }
 
-main .start-btn-wrapper {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 500px;
-  height: 200px;
+main .side-bar-wrapper {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
 }
 
-main .start-btn-wrapper .start-btn {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  width: 100px;
-  height: 100px;
-  border: 1px solid silver;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-main .start-btn-wrapper .start-btn:hover {
-  background: silver;
-}
-
-main .start-btn-wrapper .start-btn img {
-  width: 50px;
-  height: 50px;
-}
-
-main .start-btn-wrapper .start-btn span {
-  text-align: center;
+main .main-content-wrapper {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
 }
 
 footer {
   grid-row: 3 / 4;
   grid-column: 1 / 2;
-  background: orange;
 }
 
 footer .footer-wrapper {
   width: 100%;
   height: 100%;
   position: relative;
+  background: #ffa45c;
 }
 
 footer .footer-text {
@@ -171,9 +182,12 @@ footer .footer-text {
   left: 50%;
   font-size: 10px;
   line-height: 22px;
+  user-select: none;
+  color: #332112;
+  transform: translate(-50%);
 }
 
-footer .notification-btn {
+footer #notification-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -182,9 +196,15 @@ footer .notification-btn {
   position: absolute;
   top: 0;
   right: 0;
+  opacity: 0.8;
 }
 
-footer .notification-btn img {
+footer #notification-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 1;
+}
+
+footer #notification-btn img {
   width: 16px;
   height: 16px;
 }

@@ -3,6 +3,10 @@
 $header-height: 30px;
 $footer-height: 22px;
 
+$main-color: #ffa45c;
+$dark-color: #332112;
+$light-color: #ffe3cc;
+
 body {
     display: grid;
     grid-template-rows: $header-height 1fr $footer-height;
@@ -16,20 +20,18 @@ body {
 header {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
-    background: magenta;
     @import "./header";
 }
 
 main {
     grid-row: 2 / 3;
     grid-column: 1 / 2;
-    @import "./appStartContent";
+    @import "./mainArea";
 }
 
 footer {
     grid-row: 3 / 4;
     grid-column: 1 / 2;
-    background: orange;
     @import "./footer";
 }
 
