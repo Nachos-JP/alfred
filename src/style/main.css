@@ -102,7 +102,7 @@ header .window-control-container {
 }
 
 header .window-control-container .window-control-btn {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -121,6 +121,10 @@ header .window-control-container .window-control-btn img {
   height: 16px;
 }
 
+header .window-control-container .window-control-btn.show {
+  display: flex;
+}
+
 header .window-control-container #window-min-btn {
   grid-row: 1 / 2;
   grid-column: 1 / 2;
@@ -129,10 +133,6 @@ header .window-control-container #window-min-btn {
 header .window-control-container #window-max-btn, header .window-control-container #window-restore-btn {
   grid-row: 1 / 2;
   grid-column: 2 / 3;
-}
-
-header .window-control-container #window-restore-btn {
-  display: none;
 }
 
 header .window-control-container #window-close-btn {

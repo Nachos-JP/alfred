@@ -71,7 +71,7 @@
     right: 0;
     -webkit-app-region: no-drag;
     .window-control-btn {
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         width: 100%;
@@ -87,6 +87,9 @@
             height: 16px;
         }
     }
+    .window-control-btn.show {
+        display: flex;
+    }
     #window-min-btn {
         grid-row: 1 / 2;
         grid-column: 1 / 2;
@@ -94,9 +97,6 @@
     #window-max-btn, #window-restore-btn {
         grid-row: 1 / 2;
         grid-column: 2 / 3;
-    }
-    #window-restore-btn {
-        display: none;
     }
     #window-close-btn {
         grid-row: 1 / 2;
