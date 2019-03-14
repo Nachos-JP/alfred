@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "electron src/",
-    "dev": "node-sass src/style/scss --output src/style --output-style expanded && electron src/",
+    "dev": "webpack && electron src/",
     "package:linux": "electron-packager src/ GEKKO --overwrite --platform=linux --arch=x64 --out=dist",
     "package:mac": "electron-packager src/ GEKKO --overwrite --platform=darwin --arch=x64 --out=dist",
     "package:win": "electron-packager src/ GEKKO --overwrite --platform=win32 --arch=x64 --out=dist",
@@ -22,9 +22,14 @@
   },
   "homepage": "https://github.com/Nachos-JP/gekko#readme",
   "devDependencies": {
+    "css-loader": "^2.1.1",
     "electron": "^4.0.6",
     "electron-packager": "^13.1.0",
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
   },
   "private": true
 }

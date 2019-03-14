@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>GEKKO</title>
-    <link rel="stylesheet" href="style/main.css">
-    <script defer src="node_modules/vue/dist/vue.min.js"></script>
+    <script defer src="bundle.js"></script>
   </head>
   <body>
     <header>
@@ -13,28 +12,35 @@
           <img src="assets/icon/gekko.svg">
         </div>
         <div class="menubar">
-          <div id="menubar-new-file-btn" class="menubar-btn">
-            <img src="assets/icon/new_file.svg">
+          <div class="menubar-category">
+            <div id="menubar-new-file-btn" class="menubar-btn" title="New Project">
+              <img src="assets/icon/new_file.svg">
+            </div>
+            <div id="menubar-open-file-btn" class="menubar-btn" title="Open Project">
+              <img src="assets/icon/open_file.svg">
+            </div>
+            <div id="menubar-save-btn" class="menubar-btn" title="Save Project">
+              <img src="assets/icon/save.svg">
+            </div>
           </div>
-          <div id="menubar-open-file-btn" class="menubar-btn">
-            <img src="assets/icon/open_file.svg">
-          </div>
-          <div id="menubar-save-btn" class="menubar-btn">
-            <img src="assets/icon/save.svg">
+          <div class="menubar-category">
+            <div id="menubar-info-btn" class="menubar-btn" title="Infomation">
+              <img src="assets/icon/info.svg">
+            </div>
           </div>
         </div>
-        <span id="titlebar-project-name" class="window-title"></span>
+        <span id="titlebar-project-name" class="window-title">{{ projectName }}</span>
         <div class="window-control-container">
-          <div id="window-min-btn" class="window-control-btn">
+          <div id="window-min-btn" class="window-control-btn show">
             <img src="assets/icon/minimize.svg">
           </div>
-          <div id="window-max-btn" class="window-control-btn">
+          <div id="window-max-btn" class="window-control-btn show">
             <img src="assets/icon/maximize.svg">
           </div>
           <div id="window-restore-btn" class="window-control-btn">
             <img src="assets/icon/restore.svg">
           </div>
-          <div id="window-close-btn" class="window-control-btn">
+          <div id="window-close-btn" class="window-control-btn show">
             <img src="assets/icon/close.svg">
           </div>
         </div>
@@ -53,13 +59,10 @@
     <footer>
       <div class="footer-wrapper">
         <span class="footer-text">GEKKO 2019</span>
-        <div id="notification-btn">
+        <div id="notification-btn" title="Notification">
           <img src="assets/icon/bell.svg">
         </div>
       </div>
     </footer>
-    <script>
-      require("./renderer.js");
-    </script>
   </body>
 </html>

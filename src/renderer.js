@@ -1,5 +1,12 @@
+import Vue from "vue";
 const eventListener = require("./modules/eventListener");
+import "./style/scss/main.scss";
 
-window.onload = () => {
-  eventListener.add();
-};
+eventListener.add();
+
+const vm = new Vue({
+  el: "#titlebar-project-name",
+  data: {
+    projectName: "hello"
+  }
+});
