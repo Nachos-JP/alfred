@@ -1,7 +1,8 @@
-const windowControl = require("./windowControl");
-const fileManager = require("./fileManager");
+import windowControl from "./windowControl";
+import * as fileManager from "./fileManager";
 
-module.exports = {
+
+export default {
   add: function(){
     for(const action of Object.keys(this)){
       if(this[action].hasOwnProperty("add")){

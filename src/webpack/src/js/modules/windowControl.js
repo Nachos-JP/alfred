@@ -1,6 +1,7 @@
-const remote = require("electron").remote;
+import {remote} from "electron";
 
-module.exports = {
+
+export default {
   toggleWindowBtn: function(){
     const windowMaxBtn = document.getElementById("window-max-btn");
     const windowRestoreBtn = document.getElementById("window-restore-btn");

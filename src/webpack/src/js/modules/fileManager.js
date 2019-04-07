@@ -1,9 +1,11 @@
-const dialog = require("electron").remote.dialog;
+import {remote} from "electron";
+import fs_ from "fs";
+import path from "path";
+import dataManager from "./dataManager";
 
-const fs = require("fs").promises;
-const path = require("path");
+const dialog = remote.dialog;
+const fs = fs_.promises;
 
-const dataManager = require("./dataManager");
 
 const openFile = async ()=>{
   const filePathList = dialog.showOpenDialog(null, {
@@ -21,4 +23,4 @@ const openFile = async ()=>{
   console.log(data);
 };
 
-module.exports = {openFile};
+export {openFile};
