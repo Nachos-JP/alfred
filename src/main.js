@@ -20,7 +20,7 @@ const createWindow = ()=>{
     y: storeCoordY ? storeCoordY : null,
     frame: false
   });
-  mainWindow.loadURL(`file://${__dirname}/index.html`);
+  mainWindow.loadURL(`file://${__dirname}/webpack/dist/index.html`);
   mainWindow.webContents.openDevTools();
 
   mainWindow.on("close", ()=>{
@@ -31,11 +31,11 @@ const createWindow = ()=>{
       x: bound.x,
       y: bound.y
     });
-  })
+  });
 
   mainWindow.on("closed", ()=>{
     mainWindow = null;
-  })
+  });
 };
 
 app.on('ready', createWindow);

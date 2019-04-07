@@ -1,6 +1,6 @@
 import Vue from "vue";
 const eventListener = require("./modules/eventListener");
-import "./style/scss/main.scss";
+import "../style/main.scss";
 
 eventListener.add();
 

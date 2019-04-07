@@ -1,8 +1,7 @@
 {
   "main": "main.js",
   "dependencies": {
-    "electron-store": "^2.0.0",
-    "vue": "^2.6.7"
+    "electron-store": "^2.0.0"
   },
   "private": true
 }

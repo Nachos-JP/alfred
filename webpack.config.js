@@ -1,12 +1,14 @@
-const MODE = "development";
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackInlineSourcePlugin = require("html-webpack-inline-source-plugin");
 
+const MODE = "development";
 const enabledSourceMap = MODE === "development" ? true : false;
 
 module.exports = {
   mode: MODE,
-  entry: "./src/renderer.js",
+  entry: "./src/webpack/src/js/renderer.js",
   output: {
-    path: `${__dirname}/src`,
+    path: `${__dirname}/src/webpack/dist`,
     filename: "bundle.js"
   },
   target: "electron-renderer",
@@ -38,5 +40,12 @@ module.exports = {
     alias: {
       vue: "vue/dist/vue.js"
     }
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./src/webpack/src/index.html",
+      inlineSource: ".(js|css)$"
+    }),
+    new HtmlWebpackInlineSourcePlugin(),
+  ]
 };
