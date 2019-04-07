@@ -6,6 +6,7 @@ $footer-height: 22px;
 $main-color: #ffa45c;
 $dark-color: #332112;
 $light-color: #ffe3cc;
+$background-color: #fff1e6;
 
 body {
     display: grid;
@@ -15,6 +16,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
+    background: $background-color;
 }
 
 header {

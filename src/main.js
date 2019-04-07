@@ -18,10 +18,16 @@ const createWindow = ()=>{
     height: storeHeight ? storeHeight : 600,
     x: storeCoordX ? storeCoordX : null,
     y: storeCoordY ? storeCoordY : null,
-    frame: false
+    frame: false,
+    backgroundColor: "#fff1e6",
+    show: false
   });
   mainWindow.loadURL(`file://${__dirname}/webpack/dist/index.html`);
   mainWindow.webContents.openDevTools();
+
+  mainWindow.once("ready-to-show", ()=>{
+    mainWindow.show();
+  });
 
   mainWindow.on("close", ()=>{
     const bound = mainWindow.getBounds();
